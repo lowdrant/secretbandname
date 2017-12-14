@@ -1,0 +1,12 @@
+# exclude matlab backup files
+*.asm
+*~
+# published files
+*.html
+tests/html/*
+# crud Optragen generates
+*/optragen_generated_files/*.m
+*fort.9
+optragen_generated_files/*
+traj_gen/optragen_generated_files/*
+ignore/*

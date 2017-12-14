@@ -1,0 +1,9 @@
+Left Foot Constraint (Rel. to Left Foot Frame):
+    COM_x on [-l_3, l_4]
+    -l_3 <= COMx <= l_4
+    This means the COM is directly above the foot
+
+Right Foot Constraint (Rel. Right Foot Frame):
+    COM_x on [-l_3, l_4]
+    -l_3 <= COMx <= l_4
+    This means the COM is directly above the foot

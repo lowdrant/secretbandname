@@ -1,0 +1,84 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ECE4560 Biped Lab 1.2
+% Jacobian Documentation
+% 
+% Original Author:
+% Marion Anderson
+%
+% License:
+% MIT License
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-----------------------------------------------------------
+%	FORMATTING
+%-----------------------------------------------------------
+
+\documentclass[20pt]{article}
+\usepackage{graphicx}
+
+%-----------------------------------------------------------
+%	COMMANDS
+%-----------------------------------------------------------
+
+\newcommand{\eqlb}{\vspace{15pt} \\}  % linebreak after eqs
+\newcommand{\SE}[1]{\mathscr{#1}}  % script frame names
+\newcommand{\twovec}[2]{
+						\left[
+							\begin{array}{c}
+								#1 \\ #2
+							\end{array}
+						\right]
+					   }
+\newcommand{\p}[1]{p^\SE{#1}}
+\newcommand{\partiald}[2]{\frac{\partial #1}{\partial #2}}
+
+%-----------------------------------------------------------
+%	WRITING DOCUMENT
+%-----------------------------------------------------------
+
+\begin{document}
+	\section*{Biped Jacobian}
+		\begin{center}
+			\scalebox{1.2}{$
+			J(\vec{\alpha}) * \vec{\dot{\alpha}} = 
+			\left[\begin{array}{c}
+				\nu^1 \\ \nu^2 \\ \hline \omega
+			\end{array}\right]
+			$}
+		\end{center}
+	
+	\section*{Position Equations}
+		\vspace{10pt}
+		\begin{center}
+		$\left[\begin{array}{c}
+			x \\ y \vspace{3pt}\\ \theta
+		\end{array}\right]	
+		=
+		\left[\begin{array}{c}
+			l_1*\sin(\alpha_1)
+			+ l_2*\sin(\alpha_1+\alpha_2) \vspace{10pt}\\
+			
+			\frac{l_0}{2} + l_1*\cos(\alpha_1)
+			+ l_2*\sin(\alpha_1+\alpha_2) \vspace{5pt} \\ 
+			
+			\alpha_1 + \alpha_2 + \alpha_3
+		\end{array}\right]$
+		\end{center}
+
+	\vspace{4pt}
+	\section*{Expanded Jacobian}
+		\vspace{10pt}
+		\begin{center}
+			$J(\vec{\alpha}) = 
+			\left[\begin{array}{ccc}
+				l_1*cos(\alpha_1)+l_2*cos(\alpha_1+\alpha_2)
+				& l_2*cos(\alpha_1+\alpha_2) & 0 \\
+				
+				-l_1*sin(\alpha_1)-l_2*sin(\alpha_1+\alpha_2)
+				& -l_2*sin(\alpha_1+\alpha_2) & 0 \\
+				
+				1 & 1 & 1
+			\end{array}\right]$
+		\end{center}
+\end{document}
