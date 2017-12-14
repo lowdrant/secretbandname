@@ -1,0 +1,4 @@
+[submodule "Optragen"]
+	path = Optragen
+	url = https://github.com/ivalab/Optragen
+	branch = refactor

@@ -65,11 +65,7 @@ All joints in a vertical line, with their y-axes parallel to that line.
 * L<sub>0</sub> was calulated by doubling the plastic connector's length
 * Link length measurements **include** motors' contributions
 * For lab scripts, got to [labs/](labs/)
-* The Dynamixel library no longer works properly` 
-	* The MCU keeps mouting as ttyACM0
-	* Creating a symlink at ttyUSB0 using udev did not work
-	* Editing ```dxl_hal.c``` to use ```ttyACM$d``` did not work either
-
+* Be sure to clone the Optragen submodule for trajectory generation
 
 ## Authors
 * **Madeleyne Vaca**
