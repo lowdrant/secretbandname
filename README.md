@@ -77,3 +77,10 @@ All joints in a vertical line, with their y-axes parallel to that line.
 ## Special Thanks
 * **Alex Chang** - ECE4560 TA
 * **Patricio Vela** - ECE4560 Professor
+
+## License
+It should be noted that not all the work here is mine. In particular, this project was a class assignment, and I had no involvement whatsoever in the development of Optragen. 
+
+However, the MATLAB code in this repository, beyond skeleton code for the SE2 and Biped classes, was developed by Madeleyne and me.
+
+ We have no issue with that code being used for inspiration, knowledge gap-filling, or utility, but it is the result of academic coursework. Deliberately duplication with intent to substitue understanding in an academic setting would constitute plagiarism.
