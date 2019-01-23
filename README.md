@@ -83,4 +83,4 @@ It should be noted that not all the work here is mine. In particular, this proje
 
 However, the MATLAB code in this repository, beyond skeleton code for the SE2 and Biped classes, was developed by Madeleyne and me.
 
- We have no issue with that code being used for inspiration, knowledge gap-filling, or utility, but it is the result of academic coursework. Deliberately duplication with intent to substitue understanding in an academic setting would constitute plagiarism.
+ We have no issue with that code being used for inspiration, knowledge gap-filling, or utility, but it is the result of academic coursework. Deliberate duplication with intent to substitue understanding in an academic setting would constitute plagiarism.
