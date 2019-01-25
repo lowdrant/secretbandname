@@ -38,7 +38,7 @@ HL = linspace(0, hl, 20);
 
 % Problem Files:
 % ===================================================
-pathName = '../../optragen_generated_files';  % rel to genSource.createHeader
+pathName = '../optragen_generated_files';  % rel to genSource.createHeader
 
 % List of trajectories used in the problem
 % ========================================

@@ -5,14 +5,14 @@
 %============================== gaitGen.m =============================
 %% Setup
 
-clear; clc; close all
+clear; clc; close all; restoredefaultpath
 global nlp
 
 % Optragen Paths
 % ==============
 SNOPTPATH = genpath('../snopt');
 addpath('../', '../Optragen', '../Optragen/src', SNOPTPATH, ...
-        'optragen_generated_files');
+        '../optragen_generated_files');
 
 % Biped
 % =====

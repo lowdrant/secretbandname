@@ -8,7 +8,7 @@
 % =======================================================================
 
 %% Setup
-clear; clc; close all
+clear; clc; close all; restoredefaultpath
 global nlp;
 
 % Optragen Stuff
@@ -108,9 +108,9 @@ pos_constr = constraint(x0, g_ee_x_str, x0, 'initial', xVars) ...
              + constraint(yf, g_ee_y_str, yf, 'final', xVars);
 % velocity constraints
 % "must start at rest"
-% %vel_constr = constraint(0, 'a1d', 0, 'initial', xVars) ...
-% %               + constraint(0, 'a2d', 0, 'initial', xVars) ...
-% %               + constraint(0, 'a3d', 0, 'initial', xVars);
+vel_constr = constraint(0, 'a1d', 0, 'initial', xVars) ...
+              + constraint(0, 'a2d', 0, 'initial', xVars) ...
+              + constraint(0, 'a3d', 0, 'initial', xVars);
 
 % orientation constraints
 % "toe and heel cannot phase through ground"
@@ -143,7 +143,7 @@ HL = linspace(0,hl,20);
 
 % Problem Files:
 % ===================================================
-pathName = './optragen_generated_files';  % Save it all in the current directory.
+pathName = '../optragen_generated_files';  % Save it all in the current directory.
 probName = 'Lab4';
 
 % List of trajectories used in the problem
@@ -203,7 +203,7 @@ A3d = fnval(fnder(a3SP), refinedTimeGrid);
 %% Deliverable 1b Animation
 
 a_traj = [A1; A2; A3; zeros(3, length(A1))];
-figure(1) clf
+figure(1), clf
 my_biped.animateTrajectory(linspace(0, 1, length(A1)), a_traj);
 plot(x0, y0-l_0/2, 'd', 'LineWidth', 2)
 plot(xf, yf-l_0/2, 'd', 'LineWidth', 2)

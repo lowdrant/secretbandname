@@ -20,10 +20,10 @@ my_lnk_ctrds = [0,  0,  0,   32, 0, 0;
 
 my_biped.set_com(my_link_lens, my_lnk_m, my_lnk_ctrds);
 
-my_alpha = [pi/3,  0;
-            -pi/3, 0;
-            0, 0];
-my_biped.set_alpha(my_alpha);
+my_joint_angles_2 = [ pi/6,  0;
+                     -pi/6, -pi/6
+                     0,      pi/6];
+my_biped.set_alpha( my_joint_angles_2 );
 
 %% COM
 
